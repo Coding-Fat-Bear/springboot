@@ -302,7 +302,8 @@ nav li {
     background-color: yellowgreen;
     cursor: pointer
 }
-        
+     i { vertical-align: middle;
+        horizontal-align: middle}    
     </style>
     <body id="main">
         
@@ -424,6 +425,25 @@ nav li {
                 </div>
                         <button type="button" id="prj" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
                 </div> 
+                        <div class="tildiv">
+            <div onclick="tiledrop(this.id);" id="pr" class="tile" title="<%= request.getAttribute("MF") %>">
+                <div class="mstic" style="margin-left:8px">
+                    <label style="font-size:17px;color:black"><%= request.getAttribute("MF") %></label>
+                    <i id="pr" class="fas fa-project-diagram" style='font-size:93px;'></i></div>
+                      <div id="pr" class="content">
+                        <ul>
+                        <li><button formaction="prjcre" class="opt" ><%= request.getAttribute("EMC") %></button></li>
+			<li><button formaction="prjcha" class="opt"><%= request.getAttribute("EMED") %></button></li>
+                        </ul>
+                        <ul>
+			<li><button formaction="prjdis" class="opt"><%= request.getAttribute("EMDIS") %></button></li>
+                        <li><button formaction="prjdel" class="opt"><%= request.getAttribute("EMDEL") %></button></li>
+                        </ul> 
+                      </div>                        
+                </div>
+                        <button type="button" id="pr" onclick="retn(this.id);" class="ret" ><i class="fa fa-undo"></i></button>
+                </div> 
+                       
                         
                      
         </form>                
